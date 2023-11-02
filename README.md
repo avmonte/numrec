@@ -16,7 +16,7 @@ python3 translate.py [inputPic]
     <img src="example/original.png" width="192" height="192">
     <img src="example/cropped&grayscaled.png" width="192" height="192">
     <img src="example/colormaximized.png" width="192" height="192">
-    <img src="example/cellsmerged.png" width="192" height="192 style="image-rendering: pixelated;"">
+    <img src="example/cellsmerged_upscaled.png" width="192" height="192 style="image-rendering: pixelated;"">
 </div>
 
 The pics are not to scale.
