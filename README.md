@@ -1,5 +1,7 @@
 # numrec
-This is my take in handwritten number recognition. This is an exercise for me, so I did not use any external sources to figure out the logic of the algorithm
+This is my take in handwritten number recognition. This is an exercise for me, so I did not use any external sources to figure out the logic of the algorithm.
+
+THIS IS A WORK IN PROGRESS
 
 
 ## Usage
