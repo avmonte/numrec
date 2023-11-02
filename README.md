@@ -7,7 +7,7 @@ THIS IS A WORK IN PROGRESS
 ## Usage
 
 ```bash
-python3 translate.py [inputPic]
+python3 main.py [inputPic]
 ```
 
 ## What does the algorithm do?
