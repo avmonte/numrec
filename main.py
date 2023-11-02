@@ -46,7 +46,7 @@ def main():
 	merge()
 
 	# Save
-	cv2.imwrite(f"processed/cellsmerged_{filename}", blank_img)
+	cv2.imwrite(f"example/cellsmerged_{filename.split('/')[-1]}", blank_img)
 
 
 main()
