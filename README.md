@@ -14,7 +14,7 @@ python3 translate.py [inputPic]
     <img src="two.PNG" width="224" height="224">
     <img src="p0_two.png" width="224" height="224">
     <img src="p1_two.png" width="224" height="224">
-    <img src="p2_two.png" width="224" height="224 style="image-rendering: pixelated;"">
+    <img src="upscaled224.png" width="224" height="224 style="image-rendering: pixelated;"">
 </div>
 
 The pics are not to scale.
