@@ -1,10 +1,10 @@
 import cv2
 import numpy as np
-import sys
+from sys import argv
 
 # Reads the image and identifies the props
-filename = sys.argv[1]
-image = cv2.imread(filename, cv2.IMREAD_GRAYSCALE)
+path = argv[1]
+image = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
 height, width = image.shape
 
 size = 512
@@ -41,12 +41,19 @@ def merge():
 
 
 def main():
+
 	crop()
 	maximize()
 	merge()
 
+	filename = path.split('/')[-1]
+
 	# Save
-	cv2.imwrite(f"example/cellsmerged_{filename.split('/')[-1]}", blank_img)
+	try:
+		cv2.imwrite(f"processed/cellsmerged_{filename}", blank_img)
+	except:
+		print("The filename is not standardized")
+
 
 
 main()
