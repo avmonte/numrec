@@ -47,7 +47,7 @@ def main():
 	merge()
 
 	# Save
-	cv2.imwrite(f"processed/p2_{filename}", blank_img)
+	cv2.imwrite(f"processed/cellsmerged_{filename}", blank_img)
 
 
 main()
