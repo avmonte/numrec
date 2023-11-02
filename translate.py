@@ -37,7 +37,6 @@ def merge():
 			h = i // k
 			w = j // k
 			nop = (i - 1) % k + (j - 1) % k
-			# blank_img[h, w] = (((h + 1) * (w + 1) - 1) * blank_img[h, w] + image[i, j]) // ((h + 1) * (w + 1))
 			blank_img[h, w] = (nop * blank_img[h, w] + image[i, j]) // (nop + 1)
 
 
