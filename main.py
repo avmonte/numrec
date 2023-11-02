@@ -46,14 +46,11 @@ def main():
 	maximize()
 	merge()
 
-	filename = path.split('/')[-1]
-
 	# Save
 	try:
-		cv2.imwrite(f"processed/cellsmerged_{filename}", blank_img)
+		cv2.imwrite(f"processed/cellsmerged_{path.split('/')[-1]}", blank_img)
 	except:
 		print("The filename is not standardized")
-
 
 
 main()
