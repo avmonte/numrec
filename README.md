@@ -10,6 +10,8 @@ THIS IS A WORK IN PROGRESS
 python3 translate.py [inputPic]
 ```
 
+`inputPic` needs to be a *.jpg* or *.png* file with a minimum size of 512x512.
+
 ## What does the algorithm do?
 
 <div style="text-align:center;">
