@@ -8,8 +8,8 @@ image = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
 height, width = image.shape
 
 size = 512
-n = 8
-blank_img = np.zeros(shape=(8, 8, 1), dtype=np.int16)
+n = 32  ##
+blank_img = np.zeros(shape=(n, n, 1), dtype=np.int16)
 
 
 def crop():
@@ -20,7 +20,7 @@ def crop():
 	height, width = image.shape
 
 
-def scale():
+def color_scale():
 	min_val, max_val, _, _ = cv2.minMaxLoc(blank_img)
 
 	h, w, _ = blank_img.shape
@@ -42,9 +42,10 @@ def maximize():
 def merge():
 	for i in range(height):
 		for j in range(width):
-			k = width // n
+			k = size // n
 			h = i // k
 			w = j // k
+
 			nop = (i - 1) % k + (j - 1) % k
 			blank_img[h, w] = (nop * blank_img[h, w] + image[i, j]) // (nop + 1)
 
@@ -54,11 +55,11 @@ def main():
 	crop()
 	# maximize()
 	merge()
-	scale()
+	color_scale()
 
 	# Save
 	try:
-		cv2.imwrite(f"processed/cellsmerged1_{path.split('/')[-1]}", blank_img)
+		cv2.imwrite(f"processed/cellsmerged16_{path.split('/')[-1]}", blank_img)
 	except:
 		print("The filename is not standardized")
 

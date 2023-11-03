@@ -10,7 +10,6 @@ def scale():
 	h, w = matrix.shape
 	for col in range(h):
 		for row in range(w):
-			print(matrix[col, row], end='  ')
 			matrix[col, row] = ((matrix[col, row] - min_val) / (max_val - min_val)) * 255
 
 
