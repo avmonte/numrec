@@ -20,6 +20,15 @@ def crop():
 	height, width = image.shape
 
 
+def scale():
+	min_val, max_val, _, _ = cv2.minMaxLoc(blank_img)
+
+	h, w, _ = blank_img.shape
+	for col in range(h):
+		for row in range(w):
+			blank_img[col, row] = ((blank_img[col, row] - min_val) / (max_val - min_val)) * 255
+
+
 def maximize():
 	min_val, max_val, min_loc, max_loc = cv2.minMaxLoc(image)
 	avg_color = (max_val + min_val) / 2
@@ -43,12 +52,13 @@ def merge():
 def main():
 
 	crop()
-	maximize()
+	# maximize()
 	merge()
+	scale()
 
 	# Save
 	try:
-		cv2.imwrite(f"processed/cellsmerged_{path.split('/')[-1]}", blank_img)
+		cv2.imwrite(f"processed/cellsmerged1_{path.split('/')[-1]}", blank_img)
 	except:
 		print("The filename is not standardized")
 

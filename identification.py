@@ -11,9 +11,9 @@ h, w = correlation.shape
 
 for i in range(h):
 	for j in range(w):
-		correlation[i, j] = (256 - abs(correlation[i, j] - test[i, j]))
+		correlation[i, j] = (255 - abs(correlation[i, j] - test[i, j]))
 
-confidence = correlation.mean() / 256
+confidence = correlation.mean() / 255
 threshold = 0.5
 print(f"\nConfidence: {confidence}\nThreshold: {threshold}, thus ", end='')
 if confidence > threshold:
